@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import Header from "./src/Header";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import MyProfile from "./src/MyProfile";
+import { myProfile } from "./src/data";
+import Margin from "./src/Margin"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider style={styles.container}>
+      <SafeAreaView edges={["bottom", "top", "left", "right"]}>
+        
+        <Header />
+        <Margin height={10} />
+
+        <MyProfile 
+          uri={myProfile.uri}
+          name={myProfile.name}
+          introduction={myProfile.introduction}
+        />
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
   },
 });
