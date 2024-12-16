@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 function TabButton(props) {
   return (
     <TouchableOpacity
+      activeOpacity={1}
       onPress={props.onPress}
       style={{
         flex: 1,

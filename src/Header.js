@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 function IconButton(props){
     return(
-        <View style={{paddingHorizontal: 6}}>
+        <TouchableOpacity hitSlop={{top:12, bottom:12}} style={{paddingHorizontal: 6,}}>
             <Ionicons name={props.name} size={24} color="black" />
-        </View>
+        </TouchableOpacity>
     );
 }
 
