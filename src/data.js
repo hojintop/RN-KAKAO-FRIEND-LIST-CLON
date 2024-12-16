@@ -73,5 +73,5 @@ export const friendProfiles = [
     uri: "https://cdn.pixabay.com/photo/2017/08/30/17/12/waffle-hearts-2697904__480.jpg",
     name: "성지현",
     introduction: "~off~",
-  },
+  }
 ];
